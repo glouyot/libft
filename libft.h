@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/15 15:13:02 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/11/16 14:27:39 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <unistd.h>
+# include <stdio.h>
+
+# define BLANC			"\033[00m"
+# define RED			"\033[31m"
+# define BLUE			"\033[34m"
+# define CYAN			"\033[36m"
+# define GREEN			"\033[32m"
+# define YELLOW			"\033[33m"
+# define CANCEL			"\033[00m"
+# define DEBUG			printf("Line %i, in file %s.\n", __LINE__, __FILE__);
 
 typedef unsigned char	t_byte;
 
@@ -61,6 +72,7 @@ void					ft_putendl_fd(char const *s, int fd);
 void					ft_putnbr(int nb);
 void					ft_putnbr_fd(int nb, int fd);
 void					ft_putstr(char *s);
+void					ft_putstr_color(char *s, char *color);
 void					ft_putstr_fd(char *s, int fd);
 char					*ft_strcat(char *dst, char const *src);
 char					*ft_strchr(char const *s, int c);

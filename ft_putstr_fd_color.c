@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr_fd_color.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 11:00:36 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/16 14:58:35 by glouyot          ###   ########.fr       */
+/*   Created: 2016/11/16 14:53:48 by glouyot           #+#    #+#             */
+/*   Updated: 2016/11/16 14:56:08 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd_color(char *s, int fd, char *color)
 {
-	if (!s)
+	if (!(s))
 		return ;
-	write(fd, s, ft_strlen(s));
+	ft_putstr_fd(fd, color);
+	ft_putstr_fd(fd, s);
+	ft_putstr_fd(fd, CANCEL);
 }
