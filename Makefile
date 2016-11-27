@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/11/27 15:52:59 by glouyot          ###   ########.fr        #
+#    Updated: 2016/11/27 16:03:17 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,20 +97,22 @@ CPPFLAGS	= -I$(INC_PATH)
 all: $(NAME)
 
 $(NAME): $(OBJ) 
-	ar rc $@ $^
-	ranlib $(NAME)
+	@ar rc $@ $^
+	@ranlib $(NAME)
+	@echo "Compilation: \033[1;32mDONE!\033[m"
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
-	mkdir $(OBJ_PATH) 2> /dev/null || true
-	$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
-
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:
-	rm -fv $(OBJ)
-	rmdir $(OBJ_PATH) 2> /dev/null || true
+	@rm -f $(OBJ)
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
+	@echo "Clean: \033[1;32mDONE!\033[m"
 
 fclean: clean
-	rm -fv $(NAME)
+	@rm -f $(NAME)
+	@echo "Fclean: \033[1;32mDONE!\033[m"
 
 re: fclean all
 
