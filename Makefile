@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/11/27 15:49:56 by glouyot          ###   ########.fr        #
+#    Updated: 2016/11/27 15:52:59 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,7 +105,7 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 
-cleat:
+clean:
 	rm -fv $(OBJ)
 	rmdir $(OBJ_PATH) 2> /dev/null || true
 
