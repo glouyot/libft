@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/27 15:46:56 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/10 18:37:07 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdio.h>
+# include "get_next_line.h"
 
 # define WHITE			"\033[00m"
 # define RED			"\033[31m"
@@ -69,7 +70,9 @@ void					*ft_memset(void *block, int c, size_t size);
 void					ft_putchar(char c);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putendl(char const *s);
+void					ft_putendl_color(char const *s, char *color);
 void					ft_putendl_fd(char const *s, int fd);
+void					ft_putendl_fd_color(char const *s, int fd, char *color);
 void					ft_putnbr(int nb);
 void					ft_putnbr_fd(int nb, int fd);
 void					ft_putstr(char *s);

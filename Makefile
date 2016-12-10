@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/10 15:37:41 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/10 18:28:23 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,8 @@ SRC_NAME	= utilities/ft_atoi.c			\
 			  string/ft_strsub.c			\
 			  string/ft_strtrim.c			\
 			  string/ft_tolower.c			\
-			  string/ft_toupper.c
+			  string/ft_toupper.c			\
+			  utilities/get_next_line.c
 OBJ_PATH	= objs
 OBJ_NAME	= $(SRC_NAME:.c=.o)
 SRC			= $(addprefix $(SRC_PATH)/,$(SRC_NAME))
@@ -113,8 +114,7 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:
-	@rm -f $(OBJ)
-	@rmdir $(OBJ_PATH) 2> /dev/null || true
+	@rm -rf $(OBJ_PATH)
 	@echo "Clean: \033[1;32mDONE!\033[m"
 
 fclean: clean

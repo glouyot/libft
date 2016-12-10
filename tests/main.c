@@ -1,8 +1,10 @@
 #include "libft.h"
+#include <fcntl.h>
 
-int		main(void)
+int		main(int ac, char **av)
 {
-	DEBUG;
-	ft_putstr_color("coucou", RED);
-	ft_putendl("tatata");
+	int	fd = open(av[ac - 1], O_RDONLY);
+	char *line;
+	while (get_next_line(fd, &line) == 1)
+		ft_putendl_color(line, GREEN);
 }
