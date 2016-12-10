@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/11/28 10:22:22 by glouyot          ###   ########.fr        #
+#    Updated: 2016/11/28 11:13:31 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -117,9 +117,9 @@ fclean: clean
 re: fclean all
 
 coffee:
-	@echo " ( "
-	@echo " ) "
-	@echo "[_])"
+	@echo "  ("
+	@echo "  )"
+	@echo "c[_]"
 
 norme:
 	@norminette $(SRC)
