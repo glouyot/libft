@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/10 18:28:23 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/12 11:56:44 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,9 @@ SRC_NAME	= utilities/ft_atoi.c			\
 			  output/ft_putendl_fd.c		\
 			  output/ft_putendl_fd_color.c	\
 			  output/ft_putnbr.c			\
+			  output/ft_putnbr_base.c		\
 			  output/ft_putnbr_fd.c			\
+			  output/ft_putnbr_fd_base.c	\
 			  output/ft_putstr.c			\
 			  output/ft_putstr_color.c		\
 			  output/ft_putstr_fd.c			\

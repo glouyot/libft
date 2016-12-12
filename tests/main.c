@@ -3,8 +3,7 @@
 
 int		main(int ac, char **av)
 {
-	int	fd = open(av[ac - 1], O_RDONLY);
-	char *line;
-	while (get_next_line(fd, &line) == 1)
-		ft_putendl_color(line, GREEN);
+	if(ac || av)
+		;
+	ft_putnbr_base(9,"0124");
 }

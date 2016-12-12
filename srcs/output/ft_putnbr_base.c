@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/05 10:13:33 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/10 18:41:38 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/12 11:58:16 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/12 12:25:42 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft.h"
-
-# define BUFF_SIZE	4096
-
-typedef struct		s_gnl
+void	ft_putnbr_base(int nb, char *base)
 {
-	char			*buf;
-	int				fd;
-	int				i;
-	int				count;
-	int				nl;
-	struct s_gnl	*next;
-}					t_gnl;
-
-int					get_next_line(int const fd, char **line);
-
-#endif
+	if (nb == -2147483648)
+		ft_putstr("-2147483648");
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-nb);
+	}
+	else if (nb < (int)ft_strlen(base))
+		ft_putchar(base[nb]);
+	else
+	{
+		ft_putnbr_base((nb / (int)ft_strlen(base)), base);
+		ft_putchar(base[nb % ft_strlen(base)]);
+	}
+}

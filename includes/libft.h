@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/10 18:37:07 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/12 12:12:31 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,9 @@ void					ft_putendl_color(char const *s, char *color);
 void					ft_putendl_fd(char const *s, int fd);
 void					ft_putendl_fd_color(char const *s, int fd, char *color);
 void					ft_putnbr(int nb);
+void					ft_putnbr_base(int nb, char *base);
 void					ft_putnbr_fd(int nb, int fd);
+void					ft_putnbr_fd_base(int nb, int fd, char *base);
 void					ft_putstr(char *s);
 void					ft_putstr_color(char *s, char *color);
 void					ft_putstr_fd(char *s, int fd);
