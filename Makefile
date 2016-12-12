@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/12 16:59:06 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/12 17:52:13 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,6 +91,7 @@ SRC_NAME	= utilities/ft_atoi.c			\
 			  string/ft_strtrim.c			\
 			  string/ft_tolower.c			\
 			  string/ft_toupper.c			\
+			  utilities/ft_two_comp.c		\
 			  utilities/get_next_line.c
 OBJ_PATH	= objs
 OBJ_NAME	= $(SRC_NAME:.c=.o)
