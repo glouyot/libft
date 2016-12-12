@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/12 12:12:31 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/12 16:59:42 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef	struct			s_list
 void					die(char *s);
 int						ft_atoi(char const *s);
 void					ft_bzero(void *block, size_t size);
+int						ft_check_base(char *base);
 size_t					ft_countwords(char *s, char c);
 int						ft_isalnum(int c);
 int						ft_isalpha(int c);
@@ -82,6 +83,7 @@ void					ft_putstr_color(char *s, char *color);
 void					ft_putstr_fd(char *s, int fd);
 void					ft_putstr_fd_color(char *s, int fd, char *color);
 char					*ft_strcat(char *dst, char const *src);
+int						ft_strcchr(char const *s, int c);
 char					*ft_strchr(char const *s, int c);
 void					ft_strclr(char *s);
 int						ft_strcmp(char const *s1, char const *s2);

@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_check_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/12 11:58:16 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/12 17:10:46 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/12 16:17:43 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/12 17:10:48 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_base(int nb, char *base)
+int		ft_check_base(char *base)
 {
-	if (!(ft_check_base(base)))
-		return ;
-	if (nb < 0)
+	int	i;
+
+	if (!(base) || ft_strlen(base) == 1)
+		return (0);
+	i = 0;
+	while (base[i])
 	{
-		ft_putchar('-');
-		ft_putnbr(-nb);
+		if (ft_strcchr(base, base[i]) > 1)
+			return (0);
+		i++;
 	}
-	else if (nb < (int)ft_strlen(base))
-		ft_putchar(base[nb]);
-	else
-	{
-		ft_putnbr_base((nb / (int)ft_strlen(base)), base);
-		ft_putchar(base[nb % ft_strlen(base)]);
-	}
+	return (1);
 }

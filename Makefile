@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/12 11:56:44 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/12 16:59:06 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ CC			= gcc
 SRC_PATH	= srcs
 SRC_NAME	= utilities/ft_atoi.c			\
 			  memory/ft_bzero.c				\
+			  utilities/ft_check_base.c		\
 			  string/ft_countwords.c		\
 			  error/ft_die.c				\
 			  is/ft_isalnum.c				\
@@ -60,6 +61,7 @@ SRC_NAME	= utilities/ft_atoi.c			\
 			  output/ft_putstr_fd.c			\
 			  output/ft_putstr_fd_color.c	\
 			  string/ft_strcat.c			\
+			  string/ft_strcchr.c			\
 			  string/ft_strchr.c			\
 			  string/ft_strclr.c			\
 			  string/ft_strcmp.c			\
