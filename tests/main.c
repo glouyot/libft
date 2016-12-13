@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/12 16:10:11 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/12 17:10:36 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/13 11:45:18 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ int		main(int ac, char **av)
 {
 	if(ac || av)
 		;
-	ft_putnbr_base(-9,"0123456789abcdef");
-	printf("\n%x\n", -9);
+	ft_putnbr_base(127,"01");
+	ft_putendl("");
+	ft_putnbr_base(-127,"01");
+	ft_putendl("");
+	printf("\n%o\n", 1239);
 }

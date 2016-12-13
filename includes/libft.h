@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/12 16:59:42 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/13 17:23:03 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int						ft_isspace(int c);
 int						ft_isupper(int c);
 int						ft_isprint(int c);
 char					*ft_itoa(int n);
+char					*ft_itoa_base(int n, char *base);
 void					ft_lstadd(t_list **alst, t_list *new);
 t_list					*ft_lstat(t_list *lst, size_t n);
 size_t					ft_lstcount(t_list *lst);
@@ -68,6 +69,8 @@ void					ft_memdel(void **ap);
 void					*ft_memmove(void *to, void const *from, size_t size);
 void					*ft_memrealloc(void *block, size_t size);
 void					*ft_memset(void *block, int c, size_t size);
+size_t					ft_nb_digit(long long n);
+int						ft_pow(int nb, int pow);
 void					ft_putchar(char c);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putendl(char const *s);
@@ -116,5 +119,6 @@ char					*ft_strstr(char const *src, char const *find);
 char					*ft_strtrim(char const *s);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
+char					*ft_two_comp(int nb);
 
 #endif

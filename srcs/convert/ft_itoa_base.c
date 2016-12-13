@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/09 13:24:49 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/13 16:49:45 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/13 16:39:34 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/13 17:40:22 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_itoa(int n)
+char				*ft_itoa_base(int n, char *base)
 {
 	char			*ret;
 	long long		l;
@@ -20,9 +20,12 @@ char				*ft_itoa(int n)
 	char			neg;
 
 	l = n;
-	neg = (l < 0 ? 1 : 0);
-	i = ft_nb_digit(l);
-	ret = ft_strnew(i + neg);
+	i = 1;
+	neg = (l < 0);
+	while (ft_pow(ft_strlen(base), i) <= n)
+		i++;
+	ft_putnbr(i);
+	ret = ft_strnew(8);
 	if (!ret)
 		return (NULL);
 	if (neg)
@@ -32,9 +35,9 @@ char				*ft_itoa(int n)
 	}
 	while (i > 0)
 	{
-		ret[i + neg - 1] = (l % 10) + 48;
+		ret[i + neg - 1] = base[l % ft_strlen(base)];
 		i--;
-		l = l / 10;
+		l = l / ft_strlen(base);
 	}
 	return (ret);
 }

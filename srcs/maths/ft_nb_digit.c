@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_nb_digit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/09 13:24:49 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/13 16:49:45 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/13 16:43:12 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/13 16:43:53 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_itoa(int n)
+size_t	ft_nb_digit(long long n)
 {
-	char			*ret;
-	long long		l;
-	size_t			i;
-	char			neg;
+	size_t		r;
 
-	l = n;
-	neg = (l < 0 ? 1 : 0);
-	i = ft_nb_digit(l);
-	ret = ft_strnew(i + neg);
-	if (!ret)
-		return (NULL);
-	if (neg)
+	r = 1;
+	if (n < 0)
+		n = -n;
+	while (n >= 10)
 	{
-		l = -l;
-		ret[0] = '-';
+		n = n / 10;
+		r++;
 	}
-	while (i > 0)
-	{
-		ret[i + neg - 1] = (l % 10) + 48;
-		i--;
-		l = l / 10;
-	}
-	return (ret);
+	return (r);
 }

@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/12 17:52:13 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/13 17:23:25 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		= libft.a
 CFLAGS		= -Wall -Werror -Wextra
 CC			= gcc
 SRC_PATH	= srcs
-SRC_NAME	= utilities/ft_atoi.c			\
+SRC_NAME	= convert/ft_atoi.c				\
 			  memory/ft_bzero.c				\
 			  utilities/ft_check_base.c		\
 			  string/ft_countwords.c		\
@@ -28,7 +28,8 @@ SRC_NAME	= utilities/ft_atoi.c			\
 			  is/ft_isprint.c				\
 			  is/ft_isspace.c				\
 			  is/ft_isupper.c				\
-			  utilities/ft_itoa.c			\
+			  convert/ft_itoa.c				\
+			  convert/ft_itoa_base.c		\
 			  list/ft_lstadd.c				\
 			  list/ft_lstat.c				\
 			  list/ft_lstcount.c			\
@@ -46,6 +47,8 @@ SRC_NAME	= utilities/ft_atoi.c			\
 			  memory/ft_memmove.c			\
 			  memory/ft_memrealloc.c		\
 			  memory/ft_memset.c			\
+			  maths/ft_nb_digit.c			\
+			  maths/ft_pow.c				\
 			  output/ft_putchar.c			\
 			  output/ft_putchar_fd.c		\
 			  output/ft_putendl.c			\
@@ -116,6 +119,8 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir $(OBJ_PATH)/string 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/utilities 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/output 2> /dev/null || true
+	@mkdir $(OBJ_PATH)/convert 2> /dev/null || true
+	@mkdir $(OBJ_PATH)/maths 2> /dev/null || true	
 	@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:
