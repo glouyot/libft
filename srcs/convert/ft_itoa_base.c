@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/13 16:39:34 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/13 17:40:22 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/13 18:09:02 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ char				*ft_itoa_base(int n, char *base)
 	neg = (l < 0);
 	while (ft_pow(ft_strlen(base), i) <= n)
 		i++;
-	ft_putnbr(i);
 	ret = ft_strnew(8);
 	if (!ret)
 		return (NULL);

@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/13 17:19:50 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/13 18:09:18 by glouyot          ###   ########.fr       */
+/*   Created: 2016/11/09 13:24:49 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/13 18:10:51 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_pow(int nb, int pow)
+char			*ft_itoa(int n)
 {
-	int ret;
+	char		*ret;
+	long		l;
+	size_t		i;
+	char		neg;
 
-	ret = 1;
-	if (pow == 0)
-		return (ret);
-	while (pow--)
-		ret *= nb;
+	l = n;
+	neg = (l < 0 ? 1 : 0);
+	i = ft_nb_digit(l);
+	ret = ft_strnew(i + neg);
+	if (!ret)
+		return (NULL);
+	if (neg)
+	{
+		l = -l;
+		ret[0] = '-';
+	}
+	while (i > 0)
+	{
+		ret[i + neg - 1] = (l % 10) + 48;
+		i--;
+		l = l / 10;
+	}
 	return (ret);
 }

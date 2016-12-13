@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   ft_nbr_base.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/13 17:19:50 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/13 18:09:18 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/13 11:42:29 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/13 18:11:11 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_pow(int nb, int pow)
+int	ft_nbr_base(int nb, char *base)
 {
-	int ret;
-
-	ret = 1;
-	if (pow == 0)
-		return (ret);
-	while (pow--)
-		ret *= nb;
-	return (ret);
+	if (!(ft_check_base(base)))
+		return ;
+	if (nb < 0)
+	{
+		ft_two_comp(nb);
+		//Trouver le moyen de faire ce putin de 2's complement
+		//ft_putnbr_base(-nb, base);
+	}
+	else if (nb < (int)ft_strlen(base))
+		ft_putchar(base[nb]);
+	else
+	{
+		ft_putnbr_base((nb / (int)ft_strlen(base)), base);
+		ft_putchar(base[nb % ft_strlen(base)]);
+	}
 }
