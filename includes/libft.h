@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/13 17:23:03 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/14 11:35:12 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # define GREEN			"\033[32m"
 # define YELLOW			"\033[33m"
 # define CANCEL			"\033[00m"
-# define DEBUG			printf("Line %i, in file %s.\n", __LINE__, __FILE__);
+# define DEBUG			ft_debug();
 
 typedef unsigned char	t_byte;
 
@@ -41,6 +41,7 @@ int						ft_atoi(char const *s);
 void					ft_bzero(void *block, size_t size);
 int						ft_check_base(char *base);
 size_t					ft_countwords(char *s, char c);
+void					ft_debug(void);
 int						ft_isalnum(int c);
 int						ft_isalpha(int c);
 int						ft_isascii(int c);

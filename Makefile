@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/13 17:23:25 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/14 11:34:12 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  memory/ft_bzero.c				\
 			  utilities/ft_check_base.c		\
 			  string/ft_countwords.c		\
+			  error/ft_debug.c				\
 			  error/ft_die.c				\
 			  is/ft_isalnum.c				\
 			  is/ft_isalpha.c				\
