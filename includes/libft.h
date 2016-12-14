@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/14 11:35:12 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/14 13:57:57 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <string.h>
 # include <unistd.h>
-# include <stdio.h>
 # include "get_next_line.h"
 
 # define WHITE			"\033[00m"
@@ -25,7 +24,6 @@
 # define GREEN			"\033[32m"
 # define YELLOW			"\033[33m"
 # define CANCEL			"\033[00m"
-# define DEBUG			ft_debug();
 
 typedef unsigned char	t_byte;
 
@@ -41,7 +39,7 @@ int						ft_atoi(char const *s);
 void					ft_bzero(void *block, size_t size);
 int						ft_check_base(char *base);
 size_t					ft_countwords(char *s, char c);
-void					ft_debug(void);
+void					ft_debug(int nb, char *s);
 int						ft_isalnum(int c);
 int						ft_isalpha(int c);
 int						ft_isascii(int c);
@@ -71,7 +69,7 @@ void					*ft_memmove(void *to, void const *from, size_t size);
 void					*ft_memrealloc(void *block, size_t size);
 void					*ft_memset(void *block, int c, size_t size);
 size_t					ft_nb_digit(long long n);
-int						ft_pow(int nb, int pow);
+long long				ft_pow(long long nb, int pow);
 void					ft_putchar(char c);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putendl(char const *s);

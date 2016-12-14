@@ -6,16 +6,17 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/12 17:53:52 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/13 11:58:41 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/14 13:56:48 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char* ft_two_comp(signed int n) {
-	char *s;
-	unsigned int i;
-	int j;
+char				*ft_two_comp(signed int n)
+{
+	char			*s;
+	unsigned int	i;
+	int				j;
 
 	i = (2 << 16) - n;
 	j = 0;

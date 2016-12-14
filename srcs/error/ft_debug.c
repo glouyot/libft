@@ -6,17 +6,17 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/14 11:32:11 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/14 11:33:44 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/14 13:03:29 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_debug(void)
+void	ft_debug(int nb, char *s)
 {
 	ft_putstr("Line : ");
-	ft_putnbr(__LINE__);
+	ft_putnbr(nb);
 	ft_putstr(", File : ");
-	ft_putstr(__FILE__);
+	ft_putstr(s);
 	ft_putendl(".");
 }
