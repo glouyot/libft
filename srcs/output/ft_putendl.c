@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:15:35 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/09 15:59:44 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/15 18:34:47 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 void	ft_putendl(char const *s)
 {
 	if (!s)
+	{
+		ft_error("No string in ft_putendl input.")
 		return ;
+	}
 	ft_putstr((char *)s);
 	ft_putchar('\n');
 }

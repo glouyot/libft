@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 10:47:20 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/04 11:07:39 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/15 18:14:32 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,10 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (!c)
+	{
+		ft_error("No char in ft_putchar_fd input.");
+		return ;
+	}
 	write(fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/14 13:57:57 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/15 18:11:05 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void					ft_bzero(void *block, size_t size);
 int						ft_check_base(char *base);
 size_t					ft_countwords(char *s, char c);
 void					ft_debug(int nb, char *s);
+void					ft_error(char *str);
 int						ft_isalnum(int c);
 int						ft_isalpha(int c);
 int						ft_isascii(int c);

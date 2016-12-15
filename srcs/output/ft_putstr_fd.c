@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:00:36 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/16 14:58:35 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/15 18:25:57 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
+	{
+		ft_error("No string in ft_putstr_fd input.");
 		return ;
+	}
 	write(fd, s, ft_strlen(s));
 }
