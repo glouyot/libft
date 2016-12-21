@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/15 18:10:31 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/21 15:09:38 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  string/ft_strnequ.c			\
 			  string/ft_strnew.c			\
 			  string/ft_strnstr.c			\
+			  string/ft-strpsplit.c			\
 			  string/ft_strrchr.c			\
 			  string/ft_strrealloc.c		\
 			  string/ft_strsplit.c			\

@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/15 18:11:05 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/21 15:10:57 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ char					*ft_strncpy(char *dst, char const *src, size_t n);
 int						ft_strnequ(char const *s1, char const *s2, size_t n);
 char					*ft_strnew(size_t s);
 char					*ft_strnstr(char const *s, char const *f, size_t n);
+char					**ft_strpsplit(char const *s, int(f*) (int));
 char					*ft_strrchr(char const *s, int c);
 char					*ft_strrealloc(char *str, size_t s);
 char					**ft_strsplit(char const *s, char c);
