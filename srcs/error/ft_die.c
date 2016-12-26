@@ -15,7 +15,5 @@
 
 void		die(char *s)
 {
-	DEBUG;
 	ft_putstr_color(s, RED);
-	exit(EXIT_FAILURE);
 }
