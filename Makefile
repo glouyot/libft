@@ -64,7 +64,7 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  output/ft_putnbr_fd.c			\
 			  output/ft_putnbr_fd_base.c	\
 			  output/ft_putnchar.c			\
-			  outpur/ft_putnstr.c			\
+			  output/ft_putnstr.c			\
 			  output/ft_putstr.c			\
 			  output/ft_putstr_color.c		\
 			  output/ft_putstr_fd.c			\
@@ -100,6 +100,7 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  string/ft_strtrim.c			\
 			  string/ft_tolower.c			\
 			  string/ft_toupper.c			\
+			  maths/ft_updiv.c				\
 			  utilities/ft_two_comp.c		\
 			  utilities/get_next_line.c
 OBJ_PATH	= objs
