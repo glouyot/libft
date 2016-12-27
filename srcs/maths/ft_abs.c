@@ -1,4 +1,4 @@
-#include "libft_maths.h"
+#include "ft_maths.h"
 
 inline int		ft_abs(int nb)
 {
