@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_die.c                                           :+:      :+:    :+:   */
+/*   ft_btree.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/26 13:14:07 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/27 15:46:27 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/29 13:02:34 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/29 13:06:10 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#ifndef FT_BTREE_H
+# define FT_BTREE_H
 
-void		die(char *s)
+typedef struct		s_btree
 {
-	ft_putstr_color(s, RED);
-}
+	void			*item;
+	struct s_btree	*left;
+	struct s_btree	*right;
+}					t_btree;
+
+#endif

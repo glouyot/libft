@@ -40,6 +40,7 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  list/ft_lstiter.c				\
 			  list/ft_lstmap.c				\
 			  list/ft_lstnew.c				\
+			  maths/ft_max.c				\
 			  memory/ft_memalloc.c			\
 			  memory/ft_memccpy.c			\
 			  memory/ft_memchr.c			\
@@ -49,6 +50,7 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  memory/ft_memmove.c			\
 			  memory/ft_memrealloc.c		\
 			  memory/ft_memset.c			\
+			  maths/ft_min.c				\
 			  maths/ft_nb_digit.c			\
 			  maths/ft_pow.c				\
 			  output/ft_putchar.c			\
@@ -61,6 +63,8 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  output/ft_putnbr_base.c		\
 			  output/ft_putnbr_fd.c			\
 			  output/ft_putnbr_fd_base.c	\
+			  output/ft_putnchar.c			\
+			  output/ft_putnstr.c			\
 			  output/ft_putstr.c			\
 			  output/ft_putstr_color.c		\
 			  output/ft_putstr_fd.c			\
@@ -97,6 +101,7 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  string/ft_strtrim.c			\
 			  string/ft_tolower.c			\
 			  string/ft_toupper.c			\
+			  maths/ft_updiv.c				\
 			  utilities/ft_two_comp.c		\
 			  utilities/get_next_line.c
 OBJ_PATH	= objs

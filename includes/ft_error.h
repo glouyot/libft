@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_die.c                                           :+:      :+:    :+:   */
+/*   ft_error.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/26 13:14:07 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/27 15:46:27 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/29 13:10:17 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/29 13:20:19 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#ifndef FT_ERROR_H
+# define FT_ERROR_H
 
-void		die(char *s)
-{
-	ft_putstr_color(s, RED);
-}
+void					die(char *s);
+void					ft_error(char *str);
+void					ft_debug(int nb, char *s);
+
+#endif

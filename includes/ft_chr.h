@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_die.c                                           :+:      :+:    :+:   */
+/*   ft_chr.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/26 13:14:07 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/27 15:46:27 by glouyot          ###   ########.fr       */
+/*   Created: 2016/12/29 13:10:19 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/29 13:34:11 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#ifndef FT_CHR_H
+# define FT_CHR_H
 
-void		die(char *s)
-{
-	ft_putstr_color(s, RED);
-}
+int						ft_isalnum(int c);
+int						ft_isalpha(int c);
+int						ft_isascii(int c);
+int						ft_isdigit(int c);
+int						ft_islower(int c);
+int						ft_isspace(int c);
+int						ft_isupper(int c);
+int						ft_isprint(int c);
+int						ft_tolower(int c);
+int						ft_toupper(int c);
+
+#endif
