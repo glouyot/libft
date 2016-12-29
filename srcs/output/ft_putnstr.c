@@ -1,7 +1,16 @@
-#include "output.h"
-#include "ft_error.h"
-#include "libft_maths.h"
-#include "ft_strings.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/12/29 14:15:15 by glouyot           #+#    #+#             */
+/*   Updated: 2016/12/29 14:15:28 by glouyot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void		ft_putnstr(char *s, size_t n)
 {
