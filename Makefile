@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2016/12/21 15:09:38 by glouyot          ###   ########.fr        #
+#    Updated: 2016/12/29 15:28:05 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ CFLAGS		= -Wall -Werror -Wextra
 CC			= gcc
 SRC_PATH	= srcs
 SRC_NAME	= convert/ft_atoi.c				\
+			  btree/ft_btree_create_node.c	\
+			  btree/ft_btree_apply.c		\
 			  memory/ft_bzero.c				\
 			  utilities/ft_check_base.c		\
 			  string/ft_countwords.c		\
@@ -92,7 +94,6 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  string/ft_strnequ.c			\
 			  string/ft_strnew.c			\
 			  string/ft_strnstr.c			\
-			  string/ft-strpsplit.c			\
 			  string/ft_strrchr.c			\
 			  string/ft_strrealloc.c		\
 			  string/ft_strsplit.c			\
@@ -128,7 +129,8 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir $(OBJ_PATH)/utilities 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/output 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/convert 2> /dev/null || true
-	@mkdir $(OBJ_PATH)/maths 2> /dev/null || true	
+	@mkdir $(OBJ_PATH)/maths 2> /dev/null || true
+	@mkdir $(OBJ_PATH)/btree 2> /dev/null || true
 	@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:

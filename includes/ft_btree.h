@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/29 13:02:34 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/29 13:06:10 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/29 15:02:20 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ typedef struct		s_btree
 	struct s_btree	*left;
 	struct s_btree	*right;
 }					t_btree;
+
+t_btree				*ft_btree_create_node(void *item);
 
 #endif

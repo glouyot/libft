@@ -6,9 +6,11 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/21 14:46:13 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/21 15:11:02 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/12/29 14:27:42 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char		**ft_strpsplit(char const *c, int(*f)(int c))
 {
