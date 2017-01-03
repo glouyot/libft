@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/29 13:02:34 by glouyot           #+#    #+#             */
-/*   Updated: 2017/01/03 11:28:19 by glouyot          ###   ########.fr       */
+/*   Updated: 2017/01/03 11:46:56 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct			s_rb_node
 	struct s_rb_node	*right;
 	void				*data;
 	enum				color;
-}						t_rb_node;
+}						t_rb_node
 
 typedef struct			s_btree
 {
