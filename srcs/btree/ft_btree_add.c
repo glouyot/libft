@@ -6,11 +6,19 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/02 13:17:06 by glouyot           #+#    #+#             */
-/*   Updated: 2017/01/03 14:18:17 by glouyot          ###   ########.fr       */
+/*   Updated: 2017/01/03 15:59:12 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	ft_btree_add_right(t_btree *root, void *item)
+{
+	if (!root->right)
+	{
+		root->right = ft_btree_create_node(item);
+	}
+}
 
 void		ft_btree_add(t_btree **root, void *item,
 		int (*cmpf)(void *, void *))
@@ -28,12 +36,7 @@ void		ft_btree_add(t_btree **root, void *item,
 		}
 		if (cmp >= 0)
 		{
-			if (!*root->right)
-			{
-				*root->right = ft_btree_create_node(item);
-				break;
-			}
-			else
+			!*root->right ? ft_btree_add_right(root, item) :
 				*root = *root->right;
 		}
 		else
