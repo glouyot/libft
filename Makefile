@@ -6,11 +6,11 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2017/01/04 13:05:52 by glouyot          ###   ########.fr        #
+#    Updated: 2017/01/04 18:34:07 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all, clean, fclean, re, coffee
+.PHONY: all, clean, fclean, re, coffee, createdir
 NAME		= libft.a
 CFLAGS		= -Wall -Werror -Wextra
 CC			= gcc
@@ -112,14 +112,14 @@ OBJ			= $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
 INC_PATH	= includes
 CPPFLAGS	= -I$(INC_PATH)
 
-all: $(NAME) coffee
+all: createdir $(NAME) coffee
 
 $(NAME): $(OBJ) 
 	@ar rc $@ $^
 	@ranlib $(NAME)
 	@echo "Compilation: \033[1;32mDONE!\033[m"
-
-$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
+	
+createdir:
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/is 2> /dev/null || true	
 	@mkdir $(OBJ_PATH)/list 2> /dev/null || true
@@ -131,7 +131,9 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir $(OBJ_PATH)/convert 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/maths 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/btree 2> /dev/null || true
-	@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
+
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
+		@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:
 	@rm -rf $(OBJ_PATH)
