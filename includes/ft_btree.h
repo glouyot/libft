@@ -6,27 +6,12 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/29 13:02:34 by glouyot           #+#    #+#             */
-/*   Updated: 2017/01/03 15:59:17 by glouyot          ###   ########.fr       */
+/*   Updated: 2017/01/04 13:04:27 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_BTREE_H
 # define FT_BTREE_H
-
-enum					e_rb_color
-{
-	RB_BLACK,
-	RB_RED
-};
-
-typedef struct			s_rb_node
-{
-	struct s_rb_node	*parent;
-	struct s_rb_node	*left;
-	struct s_rb_node	*right;
-	void				*data;
-	enum				color;
-}						t_rb_node
 
 typedef struct			s_btree
 {
