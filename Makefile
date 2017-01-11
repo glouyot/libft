@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2017/01/04 18:34:07 by glouyot          ###   ########.fr        #
+#    Updated: 2017/01/11 12:02:48 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,20 +107,25 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  utilities/get_next_line.c
 OBJ_PATH	= objs
 OBJ_NAME	= $(SRC_NAME:.c=.o)
-SRC			= $(addprefix $(SRC_PATH)/,$(SRC_NAME))
-OBJ			= $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
+INC_NAME	= ft_btree.h ft_chr.h ft_err.h ft_lst.h ft_maths.h ft_mem.h	\
+			  ft_put.h ft_str.h get_next_line.h libft.h
+SRC			= $(addprefix $(SRC_PATH)/, $(SRC_NAME))
+OBJ			= $(addprefix $(OBJ_PATH)/, $(OBJ_NAME))
+INC			= $(addprefix $(INC_PATH)/, $(INC_NAME))
 INC_PATH	= includes
 CPPFLAGS	= -I$(INC_PATH)
 
-all: createdir $(NAME) coffee
+all:$(NAME)
 
-$(NAME): $(OBJ) 
+$(NAME): $(OBJ) $(INC) 
 	@ar rc $@ $^
 	@ranlib $(NAME)
-	@echo "Compilation: \033[1;32mDONE!\033[m"
-	
-createdir:
-	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	@echo "Compilation: \033[1:32mDone !\033[m"
+
+$(OBJ): | $(OBJ_PATH)
+
+$(OBJ_PATH):
+	@mkdir -p $(OBJ_PATH)
 	@mkdir $(OBJ_PATH)/is 2> /dev/null || true	
 	@mkdir $(OBJ_PATH)/list 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/error 2> /dev/null || true
@@ -132,23 +137,18 @@ createdir:
 	@mkdir $(OBJ_PATH)/maths 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/btree 2> /dev/null || true
 
-$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c $(INC)
 		@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:
 	@rm -rf $(OBJ_PATH)
-	@echo "Clean: \033[1;32mDONE!\033[m"
+	@echo "Clean: \033[1:32mDone !\033[m"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "Fclean: \033[1;32mDONE!\033[m"
+	@echo "Fclean: \033[1:32mDone !\033[m"
 
 re: fclean all
-
-coffee:
-	@echo "  ("
-	@echo "  )"
-	@echo "c[_]"
 
 norme:
 	@norminette $(SRC)
