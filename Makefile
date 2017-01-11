@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2017/01/11 12:02:48 by glouyot          ###   ########.fr        #
+#    Updated: 2017/01/11 13:17:04 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -148,7 +148,8 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "Fclean: \033[1:32mDone !\033[m"
 
-re: fclean all
+re: fclean
+	@$(MAKE) all
 
 norme:
 	@norminette $(SRC)
