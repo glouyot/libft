@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 13:22:03 by glouyot           #+#    #+#              #
-#    Updated: 2017/01/11 13:17:04 by glouyot          ###   ########.fr        #
+#    Updated: 2017/01/19 14:22:15 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,11 +104,18 @@ SRC_NAME	= convert/ft_atoi.c				\
 			  string/ft_toupper.c			\
 			  maths/ft_updiv.c				\
 			  utilities/ft_two_comp.c		\
-			  utilities/get_next_line.c
+			  utilities/get_next_line.c		\
+			  bits/ft_bitget.c				\
+			  bits/ft_bitset.c				\
+			  prs/ft_prschr.c				\
+			  prs/ft_prschrs.c				\
+			  prs/ft_prschrpos.c			\
+			  prs/ft_prsnbr.c				\
+			  prs/ft_prsstr.c
 OBJ_PATH	= objs
 OBJ_NAME	= $(SRC_NAME:.c=.o)
 INC_NAME	= ft_btree.h ft_chr.h ft_err.h ft_lst.h ft_maths.h ft_mem.h	\
-			  ft_put.h ft_str.h get_next_line.h libft.h
+			  ft_put.h ft_str.h get_next_line.h ft_prs.h ft_bits.h libft.h
 SRC			= $(addprefix $(SRC_PATH)/, $(SRC_NAME))
 OBJ			= $(addprefix $(OBJ_PATH)/, $(OBJ_NAME))
 INC			= $(addprefix $(INC_PATH)/, $(INC_NAME))
@@ -136,6 +143,8 @@ $(OBJ_PATH):
 	@mkdir $(OBJ_PATH)/convert 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/maths 2> /dev/null || true
 	@mkdir $(OBJ_PATH)/btree 2> /dev/null || true
+	@mkdir -p $(OBJ_PATH)/prs
+	@mkdir -p $(OBJ_PATH)/bits
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c $(INC)
 		@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@

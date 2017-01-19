@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:59:06 by glouyot           #+#    #+#             */
-/*   Updated: 2016/12/29 13:35:41 by glouyot          ###   ########.fr       */
+/*   Updated: 2017/01/19 13:29:52 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 # include "ft_lst.h"
 # include "ft_btree.h"
 # include "ft_put.h"
+# include "ft_prs.h"
+# include "ft_bits.h"
 
 # define WHITE			"\033[00m"
 # define RED			"\033[31m"
