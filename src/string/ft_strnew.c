@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/20 10:34:10 by glouyot           #+#    #+#             */
-/*   Updated: 2017/03/20 11:09:14 by glouyot          ###   ########.fr       */
+/*   Created: 2017/03/20 11:12:08 by glouyot           #+#    #+#             */
+/*   Updated: 2017/03/20 11:20:35 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strdup(const char *s1)
+char		*ft_strnew(size_t size)
 {
-	char	*ret;
+	void	*ret;
 
-	if (!(ret = ft_strnew(ft_strlen(s1))))
+	if (!(ret = ft_memalloc(size + 1)))
 		return (NULL);
-	while(s1++ && ret++)
-		*ret = *s1;
-	return (ret);
+	return ((char *)ret);
 }

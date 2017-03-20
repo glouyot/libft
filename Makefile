@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/11 12:52:56 by glouyot           #+#    #+#              #
-#    Updated: 2017/03/20 10:58:23 by glouyot          ###   ########.fr        #
+#    Updated: 2017/03/20 11:34:49 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,13 @@ FLAGS		:=	-Wall -Werror -Wextra
 INC			:=	./include/libft.h	
 INCLUDES	:= -I./include/
 
-OBJECTS		:= src/string/ft_strdup.o\
+OBJECTS		:= 	src/string/ft_strdup.o\
+				src/string/ft_strnew.o\
+				src/memory/ft_memalloc.o\
+				src/memory/ft_memset.o\
+				src/string/ft_strlen.o\
 
-all: auteur $(NAME)
+all: $(NAME)
 
 %.o: %.c $(INC)
 	gcc $(FLAGS) $(INCLUDES) -c $< -o $@
