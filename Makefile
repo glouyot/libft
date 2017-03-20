@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/11 12:52:56 by glouyot           #+#    #+#              #
-#    Updated: 2017/03/20 11:34:49 by glouyot          ###   ########.fr        #
+#    Updated: 2017/03/20 17:56:23 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ OBJECTS		:= 	src/string/ft_strdup.o\
 				src/memory/ft_memset.o\
 				src/string/ft_strlen.o\
 
-all: $(NAME)
+all: 
+	$(MAKE) $(NAME) -j
 
 %.o: %.c $(INC)
 	gcc $(FLAGS) $(INCLUDES) -c $< -o $@
