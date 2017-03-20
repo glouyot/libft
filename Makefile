@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/11 12:52:56 by glouyot           #+#    #+#              #
-#    Updated: 2017/03/11 13:57:52 by glouyot          ###   ########.fr        #
+#    Updated: 2017/03/20 10:58:23 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,26 +16,22 @@ NAME		:=	libft.a
 
 FLAGS		:=	-Wall -Werror -Wextra
 
-INCDIR		:=	./include
-INC			:=	libft.h	
-INCPATH		:=	$(addprefix $(INCDIR)/, $(INC))
+INC			:=	./include/libft.h	
+INCLUDES	:= -I./include/
 
-SRCDIR		:=	./src
-
-OBJETCS		:=
-OBJECTSPATH	:=	$(addprefix $(SRC)/, $(OBJECTS))
+OBJECTS		:= src/string/ft_strdup.o\
 
 all: auteur $(NAME)
 
-%.o: %.c $(INCPATH)
-	gcc $(FLAGS) $(INCLUDES) -c $(OBJECTSPATH)
+%.o: %.c $(INC)
+	gcc $(FLAGS) $(INCLUDES) -c $< -o $@
 
-$(NAME):
-	ar rc $(NAME) $(OBJECTSPATH)
+$(NAME): $(OBJECTS)
+	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
 clean:
-	rm -rf $(OBJECTSPATH)
+	rm -rf $(OBJECTS)
 
 fclean: clean
 	rm -rf $(NAME)
