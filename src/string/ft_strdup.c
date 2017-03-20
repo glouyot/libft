@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 10:34:10 by glouyot           #+#    #+#             */
-/*   Updated: 2017/03/20 11:09:14 by glouyot          ###   ########.fr       */
+/*   Updated: 2017/03/20 13:39:56 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strdup(const char *s1)
 
 	if (!(ret = ft_strnew(ft_strlen(s1))))
 		return (NULL);
-	while(s1++ && ret++)
+	while (s1++ && ret++)
 		*ret = *s1;
 	return (ret);
 }
