@@ -6,7 +6,7 @@
 #    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/11 12:52:56 by glouyot           #+#    #+#              #
-#    Updated: 2017/03/20 17:56:23 by glouyot          ###   ########.fr        #
+#    Updated: 2017/03/20 18:31:30 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,14 @@ OBJECTS		:= 	src/string/ft_strdup.o\
 				src/memory/ft_memalloc.o\
 				src/memory/ft_memset.o\
 				src/string/ft_strlen.o\
+				src/type/ft_isalnum.o\
+				src/type/ft_isalpha.o\
+				src/type/ft_isascii.o\
+				src/type/ft_isdigit.o\
+				src/type/ft_islower.o\
+				src/type/ft_isprint.o\
+				src/type/ft_isspace.o\
+				src/type/ft_isupper.o\
 
 all: 
 	$(MAKE) $(NAME) -j
