@@ -6,7 +6,7 @@
 #    By: glouyot <glouyot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/23 11:54:29 by glouyot           #+#    #+#              #
-#    Updated: 2017/04/03 12:57:37 by glouyot          ###   ########.fr        #
+#    Updated: 2017/04/03 14:19:43 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,8 @@ OBJECTS		:= 	srcs/string/ft_strdup.o\
 				srcs/type/ft_isprint.o\
 				srcs/type/ft_isspace.o\
 				srcs/type/ft_isupper.o\
+				srcs/stdlib/ft_atoi.o\
+				srcs/stdlib/ft_itoa.o\
 
 all: $(NAME)
 

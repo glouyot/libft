@@ -6,7 +6,7 @@
 /*   By: glouyot <glouyot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 11:56:27 by glouyot           #+#    #+#             */
-/*   Updated: 2017/03/23 11:56:31 by glouyot          ###   ########.fr       */
+/*   Updated: 2017/04/03 14:19:24 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ void	*ft_memset(void *block, int c, size_t size);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *s);
 char	*ft_strnew(size_t size);
+int		ft_atoi(char const *s);
+char	*ft_itoa(int n);
 
 #endif
