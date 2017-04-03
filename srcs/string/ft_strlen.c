@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 11:27:52 by glouyot           #+#    #+#             */
-/*   Updated: 2017/03/20 11:33:56 by glouyot          ###   ########.fr       */
+/*   Updated: 2017/04/03 13:01:28 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t		ft_strlen(const char *s)
 	size_t	ret;
 
 	ret = 0;
-	while (s++)
+	while (*s++)
 		ret++;
 	return (ret);
 }

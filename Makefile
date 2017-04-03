@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: glouyot <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: glouyot <glouyot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/03/11 12:52:56 by glouyot           #+#    #+#              #
-#    Updated: 2017/03/20 18:31:30 by glouyot          ###   ########.fr        #
+#    Created: 2017/03/23 11:54:29 by glouyot           #+#    #+#              #
+#    Updated: 2017/04/03 12:57:37 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 AUTHOR		:=	glouyot
 
@@ -16,25 +17,24 @@ NAME		:=	libft.a
 
 FLAGS		:=	-Wall -Werror -Wextra
 
-INC			:=	./include/libft.h	
-INCLUDES	:= -I./include/
+INC			:=	./includes/libft.h	
+INCLUDES	:= -I./includes/
 
-OBJECTS		:= 	src/string/ft_strdup.o\
-				src/string/ft_strnew.o\
-				src/memory/ft_memalloc.o\
-				src/memory/ft_memset.o\
-				src/string/ft_strlen.o\
-				src/type/ft_isalnum.o\
-				src/type/ft_isalpha.o\
-				src/type/ft_isascii.o\
-				src/type/ft_isdigit.o\
-				src/type/ft_islower.o\
-				src/type/ft_isprint.o\
-				src/type/ft_isspace.o\
-				src/type/ft_isupper.o\
+OBJECTS		:= 	srcs/string/ft_strdup.o\
+				srcs/string/ft_strnew.o\
+				srcs/memory/ft_memalloc.o\
+				srcs/memory/ft_memset.o\
+				srcs/string/ft_strlen.o\
+				srcs/type/ft_isalnum.o\
+				srcs/type/ft_isalpha.o\
+				srcs/type/ft_isascii.o\
+				srcs/type/ft_isdigit.o\
+				srcs/type/ft_islower.o\
+				srcs/type/ft_isprint.o\
+				srcs/type/ft_isspace.o\
+				srcs/type/ft_isupper.o\
 
-all: 
-	$(MAKE) $(NAME) -j
+all: $(NAME)
 
 %.o: %.c $(INC)
 	gcc $(FLAGS) $(INCLUDES) -c $< -o $@
@@ -44,10 +44,10 @@ $(NAME): $(OBJECTS)
 	ranlib $(NAME)
 
 clean:
-	rm -rf $(OBJECTS)
+	/bin/rm -rf $(OBJECTS)
 
 fclean: clean
-	rm -rf $(NAME)
+	/bin/rm -rf $(NAME)
 
 re: fclean
 	$(MAKE) all
