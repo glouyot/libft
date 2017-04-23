@@ -6,7 +6,7 @@
 #    By: glouyot <glouyot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/23 11:54:29 by glouyot           #+#    #+#              #
-#    Updated: 2017/04/03 14:19:43 by glouyot          ###   ########.fr        #
+#    Updated: 2017/04/23 13:47:07 by glouyot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ INC			:=	./includes/libft.h
 INCLUDES	:= -I./includes/
 
 OBJECTS		:= 	srcs/string/ft_strdup.o\
+				srcs/string/ft_strichr.o\
 				srcs/string/ft_strnew.o\
 				srcs/memory/ft_memalloc.o\
 				srcs/memory/ft_memset.o\
